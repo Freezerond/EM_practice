@@ -21,7 +21,7 @@ def parse_page_links(html, start_date, end_date, url="https://spimex.com"):
 
     results = []
     soup = BeautifulSoup(html, "html.parser")
-    links = soup.find_all("a", class_="accordeon-inner__item-title link xls")
+    links = soup.select("a.accordeon-inner__item-title link xls") # find_all заменён на select
 
     for link in links:
         href = link.get("href")
@@ -45,3 +45,4 @@ def parse_page_links(html, start_date, end_date, url="https://spimex.com"):
         # больше не выводим ссылки, которые нам не подошли
         
     return results
+
