@@ -21,19 +21,19 @@ asyncpg.
 
 spimex_parser/
 │
-├── parser.py               # Основная логика парсера: загрузка HTML, XLS и разбор таблиц
-├── run_parser.py            # Точка входа (запуск парсинга)
+├── parser.py             
+├── main.py            
 │
-├── database/                # Работа с БД
-│   ├── __init__.py
-│   ├── config.py            # Конфигурация подключения к БД
-│   ├── database.py          # Создание движка и фабрики сессий (async_engine, async_session_factory)
+├── database/               
+│   ├── config.py           
+│   ├── database.py  
+│   ├── spimex_trading_results.py  
 │   └── queries/
-│       ├── __init__.py
-│       └── orm.py           # ORM-модели и функции сохранения данных
+│       └── orm.py          
 │
-├── requirements.txt         # Зависимости Python
-└── README.md                # Документация проекта 
+├── .env       
+├── requirements.txt       
+└── README.md          
 
 в папке database всё что связано с базой данных: в spimex_trading_results.py описана таблица, в папке queries в orm.py функция для создания таблицы spimex_trading_results и функция по добавлению новой записи.
 
