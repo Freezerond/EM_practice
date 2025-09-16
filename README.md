@@ -20,6 +20,7 @@ asyncpg.
 Архитектура проекта:
 
 zadanie_2/
+
 │
 ├── .env
 ├── main.py    
