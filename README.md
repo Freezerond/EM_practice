@@ -1,6 +1,7 @@
 Тема 2. Базы данных
 Задание 2.
 Парсер скачивает и обрабатывает бюллетени торгов нефтепродуктами с сайта https://spimex.com/markets/oil_products/trades/results начиная с 2023 года. На момент 16 сентября 2025 года в 16:46 в бд были сохранены 138017 записей. Скрипт отработал за 540,19 секунд.
+
 Список зависимостей:
 
 aiohttp;
@@ -19,26 +20,16 @@ asyncpg.
 Архитектура проекта:
 
 zadanie_2/
-
 │
 ├── .env
-
 ├── main.py    
-
 ├── parser.py  
-
 ├── requirements.txt
-
 ├── database/          
-
 │   ├── config.py        
-
 │   ├── database.py        
-
 │   ├── spimex_trading_results.py   
-
 │   └── queries/
-
 │       └── orm.py     
 
 в папке database всё что связано с базой данных: в spimex_trading_results.py описана таблица, в папке queries в orm.py функция для создания таблицы spimex_trading_results и функция по добавлению новой записи.
