@@ -19,19 +19,21 @@ asyncpg.
 
 Архитектура проекта:
 
-zadanie_2/
-
+spimex_parser/
 │
-├── .env
-├── main.py    
-├── parser.py  
-├── requirements.txt
-├── database/          
-│   ├── config.py        
-│   ├── database.py        
-│   ├── spimex_trading_results.py   
+├── parser.py               # Основная логика парсера: загрузка HTML, XLS и разбор таблиц
+├── run_parser.py            # Точка входа (запуск парсинга)
+│
+├── database/                # Работа с БД
+│   ├── __init__.py
+│   ├── config.py            # Конфигурация подключения к БД
+│   ├── database.py          # Создание движка и фабрики сессий (async_engine, async_session_factory)
 │   └── queries/
-│       └── orm.py     
+│       ├── __init__.py
+│       └── orm.py           # ORM-модели и функции сохранения данных
+│
+├── requirements.txt         # Зависимости Python
+└── README.md                # Документация проекта 
 
 в папке database всё что связано с базой данных: в spimex_trading_results.py описана таблица, в папке queries в orm.py функция для создания таблицы spimex_trading_results и функция по добавлению новой записи.
 
