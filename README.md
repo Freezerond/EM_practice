@@ -6,7 +6,6 @@
 Список зависимостей:
 
 aiohttp;
-
 BeautifulSoup;
 
 pandas;
