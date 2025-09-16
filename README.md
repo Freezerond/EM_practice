@@ -11,7 +11,7 @@ xlrd;
 SQLAlchemy (async);
 asyncpg. 
 
-Архитектура проекта
+Архитектура проекта:
 zadanie_2/
 │
 ├── .env
