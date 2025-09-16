@@ -22,7 +22,6 @@ asyncpg.
 zadanie_2/
 
 │
-
 ├── .env
 ├── main.py    
 ├── parser.py  
